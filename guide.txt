@@ -1,0 +1,54 @@
+Category Training
+    category_id
+    category_name
+
+Training
+    training_id
+    category_id
+    training_name
+    training_image
+    training_duration
+    training_price
+    training_exam_info
+    training_desc
+    training_outline
+
+Category Service
+    service_id
+    service_name
+
+Service
+    service_id
+    category_id
+    service_desc
+
+Partner
+    partner_id
+    partner_logo
+
+Profil
+    profil_id
+    profil_name
+    profil_phone
+    profil_wa
+    profil_ig
+    profil_fb
+    profil_tw
+    profil_lk
+    profil_email
+    profil_address
+    profil_about
+        
+Team
+    team_id
+    team_name
+    team_position
+    team_image
+
+Event
+    event_id
+    event_image
+
+Edit Training
+
+
