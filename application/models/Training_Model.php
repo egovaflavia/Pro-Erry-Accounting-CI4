@@ -17,6 +17,11 @@ class Training_Model extends CI_Model
         }
     }
 
+    public function getByIdTraining($id)
+    {
+        return $this->db->query("SELECT * FROM $this->_table WHERE category_id = $id")->result();
+    }
+
     public function insert($data)
     {
         return $this->db->insert($this->_table, $data);

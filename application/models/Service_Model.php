@@ -17,6 +17,14 @@ class Service_Model extends CI_Model
         }
     }
 
+    public function getService($id)
+    {
+        return $this->db->query("SELECT * FROM `services` 
+        LEFT JOIN category_service 
+        ON category_service.category_service_id=services.category_service_id 
+        WHERE services.category_service_id = $id ")->result();
+    }
+
     public function insert($data)
     {
         return $this->db->insert($this->_table, $data);

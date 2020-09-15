@@ -8,7 +8,7 @@ class Profil_Model extends CI_Model
     public function get($id = false)
     {
         if ($id == false) {
-            return $this->db->get($this->_table)->result();
+            return $this->db->get($this->_table)->row();
         } else {
             return $this->db->get_where($this->_table, array($this->_id => $id))->row();
         }

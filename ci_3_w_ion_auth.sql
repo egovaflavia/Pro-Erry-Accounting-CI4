@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 11, 2020 at 05:54 PM
+-- Generation Time: Sep 15, 2020 at 02:05 AM
 -- Server version: 8.0.18
 -- PHP Version: 5.6.39
 
@@ -39,7 +39,7 @@ CREATE TABLE `banners` (
 --
 
 INSERT INTO `banners` (`banner_id`, `banner_one`, `banner_two`) VALUES
-(1, 'e10baf4a2734c1a763e1440dca841128.jpg', '58bda1b723c2573495712e0f1a8b379f.jpg');
+(1, '3d7476c9e36160f0701f3cc0143dd472.png', 'e500bac3a753edff1f047e4c11039f3d.png');
 
 -- --------------------------------------------------------
 
@@ -57,7 +57,7 @@ CREATE TABLE `category_service` (
 --
 
 INSERT INTO `category_service` (`category_service_id`, `category_service_name`) VALUES
-(1, 'Our Serviceasd'),
+(1, 'Software Development'),
 (4, 'Imani Soto');
 
 -- --------------------------------------------------------
@@ -76,8 +76,8 @@ CREATE TABLE `category_training` (
 --
 
 INSERT INTO `category_training` (`category_id`, `category_name`) VALUES
-(1, 'IT Consultants'),
-(6, 'Pengadaan IT');
+(1, 'Consultants'),
+(6, 'Data Science');
 
 -- --------------------------------------------------------
 
@@ -146,7 +146,11 @@ CREATE TABLE `partners` (
 --
 
 INSERT INTO `partners` (`partner_id`, `partner_image`) VALUES
-(4, 'a8eddebbde8a2946e913befc23791155.jpg');
+(4, '04d32bfedda2a9971e8ae096fafea621.png'),
+(5, '5f80fb0b9c962c5c1fecc18737f76272.png'),
+(6, '77ecd3b0f1832c7aef0a23957fabfd38.png'),
+(7, '699012bee4258273ce96f926f7552eba.png'),
+(8, '6cff74dd6fa9765d4e4324107c1b56c1.png');
 
 -- --------------------------------------------------------
 
@@ -174,7 +178,7 @@ CREATE TABLE `profils` (
 --
 
 INSERT INTO `profils` (`profil_id`, `profil_name`, `profil_phone`, `profil_wa`, `profil_ig`, `profil_fb`, `profil_tw`, `profil_lk`, `profil_email`, `profil_address`, `profil_about`, `profil_service`) VALUES
-(1, 'Reagan Tyson', '20', '20', 'Aut commodo in aut v', 'Dolor et ipsum moles', 'Alias recusandae As', 'Quia deserunt sed an', 'fapusoq@mailinator.com', 'Consequuntur eum ven', 'asdsad', 'asdasd');
+(1, 'Reagan Tyson', '0819629431', '0819629431', 'egovaflavia', 'egovaflavia', 'egovaflavia', 'egovaflavia', 'egovaflavia@gmail.com', 'Jln. Parak Karakah No. 21 Padang', '<span title=\"\" xss=removed>Rekhatama is our brand name.</span><span xss=removed> </span><span title=\"\" xss=removed>CV Rekhindo Pratama is the name of the legality of our company.</span><span xss=removed> </span><span title=\"\" xss=removed>Rekhindo Pratama (Rekhatama) was established in September 2014 and became fully operational in March 2015. At the beginning of its establishment, Rekhatama\'s focus was on Information and Communication Technology, especially in the services of IT Consultants.</span><span xss=removed> </span><span title=\"\" xss=removed>As the company grew, two new departments were formed, namely the IT Training and Software and Apps Development department.</span>', '<p class=\"text-align-justify\" xss=removed><span class=\"tlid-translation translation\" lang=\"en\" xml:lang=\"en\">Rekhatama has three types of services including:</span></p><ul xss=removed><li class=\"text-align-justify\" xss=removed><span class=\"tlid-translation translation\" lang=\"en\" xml:lang=\"en\">IT Training & Certifications</span><ul><li class=\"text-align-justify\" xss=removed><span class=\"tlid-translation translation\" lang=\"en\" tabindex=\"-1\" xml:lang=\"en\">IT training and certification are one of our services that aim to improve the competence of developing human resources in the field of information and communication technology. </span><span class=\"tlid-translation translation\" lang=\"en\" xml:lang=\"en\">Rekhatama has the principal partners including EXIN, Arcitura, Certiport, VMware. For the detailed training category, you can find in our training menu navigations.</span></li></ul></li><li class=\"text-align-justify\" xss=removed><span class=\"tlid-translation translation\" lang=\"en\" xml:lang=\"en\">IT Consultant & Solution</span><ul><li class=\"text-align-justify\" xss=removed><span class=\"tlid-translation translation\" lang=\"en\" xml:lang=\"en\">IT Consultant & Solution</span> are one of our services that aim to give some solution and consultancy about all issues regarding Information Technology that our client has. The example of our solution product is making an IT Governance BluePrint, Detailed Engineering Design (DED) of Network Infrastructure, Detail Engineering Design of Data Center Infrastructure, Detailed Engineering Design of ICT Command Center, and some of business process blueprint. Rekhatama is also a member of PERKINDO (Persatuan Konsultan Indonesia).</li></ul></li><li class=\"text-align-justify\" xss=removed><span class=\"tlid-translation translation\" lang=\"en\" xml:lang=\"en\">Software & Apps Development</span><ul><li class=\"text-align-justify\" xss=removed><span class=\"tlid-translation translation\" lang=\"en\" xml:lang=\"en\"><span title=\"\">software and app development is one of our services that provides solutions about customer needs related to information systems.</span> <span title=\"\">Information systems and apps developed based on business processes and customer needs. The example of our system information that rekhatama had to develop is Aset Management System, Learning Management System, SIM-Monev, SIM SUSADA, Employee Management System, Company Website, Library Management System.</span></span></li></ul></li></ul>');
 
 -- --------------------------------------------------------
 
@@ -203,6 +207,7 @@ INSERT INTO `services` (`service_id`, `category_service_id`, `service_desc`) VAL
 
 CREATE TABLE `slides` (
   `slide_id` int(11) NOT NULL,
+  `slide_title` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `slide_cap` text NOT NULL,
   `slide_img` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -211,9 +216,10 @@ CREATE TABLE `slides` (
 -- Dumping data for table `slides`
 --
 
-INSERT INTO `slides` (`slide_id`, `slide_cap`, `slide_img`) VALUES
-(12, 'Sdsadsadsa', '25760cacdd1ff1fb66a78b083cc6c407.png'),
-(13, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In id, quia, possimus impedit vel voluptate corrupti fugiat ullam labore vero eum culpa eos pariatur voluptatem ab beatae, earum deleniti aliquam.', '7b8719fccefd436ab02731c34fac5f7f.jpeg');
+INSERT INTO `slides` (`slide_id`, `slide_title`, `slide_cap`, `slide_img`) VALUES
+(12, 'Big Data Science', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In id, quia, possimus impedit vel voluptate corrupti fugiat ullam labore vero eum culpa eos pariatur voluptatem ab beatae, earum deleniti aliquam.', '1822c525d705f67845528580f36ed984.jpg'),
+(13, 'Trouble Shooting', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In id, quia, possimus impedit vel voluptate corrupti fugiat ullam labore vero eum culpa eos pariatur voluptatem ab beatae, earum deleniti aliquam.', '682764e3043a7ae1f6b062394d8b037b.jpg'),
+(14, 'IT Consultant', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. In id, quia, possimus impedit vel voluptate corrupti fugiat ullam labore vero eum culpa eos pariatur voluptatem ab beatae, earum deleniti aliquam.', 'ec97345d1e12ddef51770968f9c4ef86.jpg');
 
 -- --------------------------------------------------------
 
@@ -233,7 +239,7 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`team_id`, `team_name`, `team_position`, `team_image`) VALUES
-(2, 'Alea Humphrey', 'Id dolorem ducimus ', 'fd9f84deced012707da6954a48d8f347.png');
+(2, 'Egova Riva Gustino', 'President Director', '62094c6dc7b740dc70c00f19ec2d9b79.jpg');
 
 -- --------------------------------------------------------
 
@@ -291,7 +297,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1599845077, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1600133571, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
@@ -448,7 +454,7 @@ ALTER TABLE `login_attempts`
 -- AUTO_INCREMENT for table `partners`
 --
 ALTER TABLE `partners`
-  MODIFY `partner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `partner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `profils`
@@ -466,7 +472,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `slides`
 --
 ALTER TABLE `slides`
-  MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `slide_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `teams`

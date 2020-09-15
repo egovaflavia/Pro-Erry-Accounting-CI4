@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Texas Lawers</title>
-
+    <title><?= $profils->profil_name ?></title>
+    <link rel="shortcut icon" href="<?= base_url('assets/assetFront/icon.jpg') ?>" type="image/x-icon">
     <link href="<?= base_url('assets/assetFront/') ?>css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">

@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-md-4">
                     <h5><strong>Gambar</strong></h5>
-                    <img style="width: 100%;margin: 0 auto;" class="img-responsive" src="<?= base_url('uploads/slide/') ?>c83a62a1e2a18b42ffacd7ff8259feae.jpg" alt="No image">
+                    <img style="width: 100%;margin: 0 auto;" class="img-responsive" src="<?= base_url('uploads/training/' . $trainings->training_image) ?>" alt="No image">
                 </div>
             </div>
             <div class="row">

@@ -51,12 +51,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
+$route['translate_uri_dashes'] = true;
 
 // Out of CRUD Controller
-$route['admin']['GET']  = 'Admin/index';
-$route['login']  = 'Auth/login';
-$route['logout'] = 'Auth/logout';
+$route['admin']['GET']                  = 'Admin/index';
+$route['login']                         = 'Auth/login';
+$route['logout']                        = 'Auth/logout';
+$route['training/(:num)']['GET']        = 'Home/training/$1';
+$route['detail-training/(:num)']['GET'] = 'Home/training_detail/$1';
+$route['detail-service/(:num)']['GET']  = 'Home/service_detail/$1';
+$route['detail-event']                  = 'Home/event_detail/';
+$route['home/profil']                   = 'Home/profil/';
 
 // Slide
 $route['slide']['GET']         = 'Slide/index';
